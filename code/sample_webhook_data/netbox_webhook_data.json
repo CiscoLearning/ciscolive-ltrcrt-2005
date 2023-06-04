@@ -1,0 +1,191 @@
+{
+  'event': 'updated',
+  'timestamp': '2023-05-25 19:56:18.518640+00:00',
+  'model': 'interface',
+  'username': 'developer',
+  'request_id': 'beb0ed0c-0e8f-452d-8456-679bc76ab702',
+  'data': {
+    'id': 11,
+    'url': '/api/dcim/interfaces/11/',
+    'display': 'GigabitEthernet1/0/10',
+    'device': {
+      'id': 1,
+      'url': '/api/dcim/devices/1/',
+      'display': 'c9300',
+      'name': 'c9300'
+    },
+    'vdcs': [],
+    'module': None,
+    'name': 'GigabitEthernet1/0/10',
+    'label': '',
+    'type': {
+      'value': '1000base-t',
+      'label': '1000BASE-T (1GE)'
+    },
+    'enabled': False,
+    'parent': None,
+    'bridge': None,
+    'lag': None,
+    'mtu': 2000,
+    'mac_address': None,
+    'speed': None,
+    'duplex': None,
+    'wwn': None,
+    'mgmt_only': False,
+    'description': 'Big new thing',
+    'mode': {
+      'value': 'tagged',
+      'label': 'Tagged'
+    },
+    'rf_role': None,
+    'rf_channel': None,
+    'poe_mode': None,
+    'poe_type': None,
+    'rf_channel_frequency': None,
+    'rf_channel_width': None,
+    'tx_power': None,
+    'untagged_vlan': {
+      'id': 2,
+      'url': '/api/ipam/vlans/2/',
+      'display': 'Wireless AP (100)',
+      'vid': 100,
+      'name': 'Wireless AP'
+    },
+    'tagged_vlans': [
+      {
+        'id': 4,
+        'url': '/api/ipam/vlans/4/',
+        'display': 'IoT (300)',
+        'vid': 300,
+        'name': 'IoT'
+      },
+      {
+        'id': 5,
+        'url': '/api/ipam/vlans/5/',
+        'display': 'Data (400)',
+        'vid': 400,
+        'name': 'Data'
+      },
+      {
+        'id': 6,
+        'url': '/api/ipam/vlans/6/',
+        'display': 'Guests (500)',
+        'vid': 500,
+        'name': 'Guests'
+      }
+    ],
+    'mark_connected': False,
+    'cable': None,
+    'cable_end': '',
+    'wireless_link': None,
+    'link_peers': [],
+    'link_peers_type': None,
+    'wireless_lans': [],
+    'vrf': None,
+    'l2vpn_termination': None,
+    'connected_endpoints': None,
+    'connected_endpoints_type': None,
+    'connected_endpoints_reachable': None,
+    'tags': [],
+    'custom_fields': {
+      'change_ticket_number': '73003'
+    },
+    'created': '2023-05-14T22:38:58.836332Z',
+    'last_updated': '2023-05-25T19:56:18.468976Z',
+    'count_ipaddresses': 0,
+    'count_fhrp_groups': 0,
+    '_occupied': False
+  },
+  'snapshots': {
+    'prechange': {
+      'created': '2023-05-14T22:38:58.836Z',
+      'last_updated': '2023-05-25T19:46:04.016Z',
+      'device': 1,
+      'name': 'GigabitEthernet1/0/10',
+      'label': '',
+      'description': 'Big new thing',
+      'module': None,
+      'cable': None,
+      'cable_end': '',
+      'mark_connected': False,
+      'enabled': False,
+      'mac_address': None,
+      'mtu': 1500,
+      'mode': 'tagged',
+      'parent': None,
+      'bridge': None,
+      'lag': None,
+      'type': '1000base-t',
+      'mgmt_only': False,
+      'speed': None,
+      'duplex': None,
+      'wwn': None,
+      'rf_role': '',
+      'rf_channel': '',
+      'rf_channel_frequency': None,
+      'rf_channel_width': None,
+      'tx_power': None,
+      'poe_mode': '',
+      'poe_type': '',
+      'wireless_link': None,
+      'untagged_vlan': 2,
+      'vrf': None,
+      'vdcs': [],
+      'wireless_lans': [],
+      'tagged_vlans': [
+        4,
+        5,
+        6
+      ],
+      'custom_fields': {
+        'change_ticket_number': '73003'
+      },
+      'tags': []
+    },
+    'postchange': {
+      'created': '2023-05-14T22:38:58.836Z',
+      'last_updated': '2023-05-25T19:56:18.468Z',
+      'device': 1,
+      'name': 'GigabitEthernet1/0/10',
+      'label': '',
+      'description': 'Big new thing',
+      'module': None,
+      'cable': None,
+      'cable_end': '',
+      'mark_connected': False,
+      'enabled': False,
+      'mac_address': None,
+      'mtu': 2000,
+      'mode': 'tagged',
+      'parent': None,
+      'bridge': None,
+      'lag': None,
+      'type': '1000base-t',
+      'mgmt_only': False,
+      'speed': None,
+      'duplex': None,
+      'wwn': None,
+      'rf_role': '',
+      'rf_channel': '',
+      'rf_channel_frequency': None,
+      'rf_channel_width': None,
+      'tx_power': None,
+      'poe_mode': '',
+      'poe_type': '',
+      'wireless_link': None,
+      'untagged_vlan': 2,
+      'vrf': None,
+      'vdcs': [],
+      'wireless_lans': [],
+      'tagged_vlans': [
+        4,
+        5,
+        6
+      ],
+      'custom_fields': {
+        'change_ticket_number': '73003'
+      },
+      'tags': []
+    }
+  }
+}

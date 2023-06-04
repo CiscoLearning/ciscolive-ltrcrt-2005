@@ -1,0 +1,7 @@
+{# Common interface header template. Use a Jinja2 'include' statement to put
+   this at the top of any any interface configuration template. #}
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+    <interface>
+      <{{ template_data.interface_type }}>
+        <name>{{ template_data.interface_id }}</name>

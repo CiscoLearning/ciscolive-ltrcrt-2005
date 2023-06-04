@@ -1,0 +1,92 @@
+{
+  '_occupied': False,
+  'bridge': None,
+  'cable': None,
+  'cable_end': '',
+  'connected_endpoints': None,
+  'connected_endpoints_reachable': None,
+  'connected_endpoints_type': None,
+  'count_fhrp_groups': 0,
+  'count_ipaddresses': 0,
+  'created': '2023-05-27T14:53:43.715118Z',
+  'custom_fields': {
+    'change_ticket_number': '15003'
+  },
+  'description': '',
+  'device': {
+    'display': 'c9300',
+    'id': 1,
+    'name': 'c9300',
+    'url': '/api/dcim/devices/1/'
+  },
+  'display': 'GigabitEthernet1/0/2',
+  'duplex': None,
+  'enabled': True,
+  'id': 3,
+  'l2vpn_termination': None,
+  'label': '',
+  'lag': None,
+  'last_updated': '2023-05-28T18:39:14.591927Z',
+  'link_peers': [],
+  'link_peers_type': None,
+  'mac_address': None,
+  'mark_connected': False,
+  'mgmt_only': False,
+  'mode': {
+    'label': 'Tagged',
+    'value': 'tagged'
+  },
+  'module': None,
+  'mtu': 8972,
+  'name': 'GigabitEthernet1/0/2',
+  'parent': None,
+  'poe_mode': None,
+  'poe_type': None,
+  'rf_channel': None,
+  'rf_channel_frequency': None,
+  'rf_channel_width': None,
+  'rf_role': None,
+  'speed': None,
+  'tagged_vlans': [
+    {
+      'display': 'IoT (300)',
+      'id': 4,
+      'name': 'IoT',
+      'url': '/api/ipam/vlans/4/',
+      'vid': 300
+    },
+    {
+      'display': 'Data (400)',
+      'id': 5,
+      'name': 'Data',
+      'url': '/api/ipam/vlans/5/',
+      'vid': 400
+    },
+    {
+      'display': 'Guests (500)',
+      'id': 6,
+      'name': 'Guests',
+      'url': '/api/ipam/vlans/6/',
+      'vid': 500
+    }
+  ],
+  'tags': [],
+  'tx_power': None,
+  'type': {
+    'label': '1000BASE-T (1GE)',
+    'value': '1000base-t'
+  },
+  'untagged_vlan': {
+    'display': 'Wireless AP (100)',
+    'id': 2,
+    'name': 'Wireless AP',
+    'url': '/api/ipam/vlans/2/',
+    'vid': 100
+  },
+  'url': '/api/dcim/interfaces/3/',
+  'vdcs': [],
+  'vrf': None,
+  'wireless_lans': [],
+  'wireless_link': None,
+  'wwn': None
+}

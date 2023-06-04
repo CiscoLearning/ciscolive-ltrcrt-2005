@@ -1,0 +1,28 @@
+{% if template_data.interface_mode == "trunk" %}
+        <ip>
+          <address xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" nc:operation="remove"/>
+        </ip>
+        <switchport-conf>
+          <switchport>true</switchport>
+        </switchport-conf>
+        <switchport-config>
+          <switchport>
+            <mode xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-switch">
+              <trunk/>
+            </mode>
+            <trunk xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-switch">
+              <allowed>
+                <vlan>
+                  <vlans>{{ template_data.tagged_vlans | join(",") if template_data.tagged_vlans else "all" }}</vlans>
+                </vlan>
+              </allowed>
+              <native>
+                <vlan>
+                  <vlan-id>{{ template_data.untagged_vlan }}</vlan-id>
+                </vlan>
+              </native>
+            </trunk>
+            <access xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-switch" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" nc:operation="remove"/>
+          </switchport>
+        </switchport-config>
+{% endif %}

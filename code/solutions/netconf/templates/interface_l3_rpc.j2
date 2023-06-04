@@ -1,0 +1,13 @@
+{% if template_data.interface_mode == "l3" and template_data.interface_ip and template_data.interface_netmask %}
+        <switchport-conf>
+          <switchport>false</switchport>
+        </switchport-conf>
+        <ip>
+          <address>
+            <primary>
+              <address>{{ template_data.interface_ip }}</address>
+              <mask>{{ template_data.interface_netmask }}</mask>
+            </primary>
+          </address>
+        </ip>
+{% endif %}

@@ -1,0 +1,15 @@
+        {% if not template_data.interface_description %}
+        <description xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" nc:operation="remove"/>
+        {% else %}
+        <description>{{ template_data.interface_description }}</description>
+        {% endif %}
+        {% if template_data.interface_enabled %}
+        <shutdown xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" nc:operation="remove"/>
+        {% else %}
+        <shutdown/>
+        {% endif %}
+        {% if template_data.interface_mtu %}
+        <mtu>{{ template_data.interface_mtu }}</mtu>
+        {% else %}
+        <mtu xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" nc:operation="remove"/>
+        {% endif %}

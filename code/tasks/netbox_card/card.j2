@@ -1,0 +1,100 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "Cisco Live US 2023",
+                "weight": "Bolder",
+                "size": "Medium"
+            },
+            {
+                "type": "ColumnSet",
+                "columns": [
+                    {
+                        "type": "Column",
+                        "width": "stretch",
+                        "items": [
+                            {
+                                "type": "TextBlock",
+                                "text": "{{ data.topic }}",
+                                "weight": "Bolder",
+                                "wrap": true,
+                                "color": "Good"
+                            },
+                            {
+                                "type": "TextBlock",
+                                "spacing": "None",
+                                "text": "{{ data.subtopic}}",
+                                "isSubtle": true,
+                                "wrap": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "{{ data.description }}",
+                "wrap": true
+            },
+            {
+                "type": "FactSet",
+                "facts": [
+                    {% for item in data.config %}
+                    {
+                        "title": "{{ item.title }}",
+                        "value": "{{ item.value }}"
+                    }{{ "," if not loop.last else "" }}
+                {% endfor -%}
+                ]
+            }
+        ],
+        "actions": [{
+                "type": "Action.Submit",
+                "title": "✅ Accept",
+                "style": "positive",
+                "id": "accept",
+                "data": {
+                    "approved": true,
+                    "config": [
+{#                            {% for item in data.config %}#}
+{#                            {#}
+{#                                "title": "{{ item.title }}",#}
+{#                                "value": "{{ item.value }}"#}
+{#                            }{{ "," if not loop.last else "" }}#}
+{#                        {% endfor -%}#}
+                        {% for item in data.hidden_config %}
+{#                        ,#}
+                            {
+                                "title": "{{ item.title }}",
+                                "value": {{ item.value }}
+                            }{{ "," if not loop.last else "" }}
+                        {% endfor -%}
+                    ]
+                }
+            },
+            {
+                "type": "Action.Submit",
+                "title": "❌ Decline",
+                "style": "destructive",
+                "id": "decline",
+                "data": {
+                    "approved": false,
+                    "config": [
+                        {% for item in data.hidden_config %}
+{#                        ,#}
+                            {
+                                "title": "{{ item.title }}",
+                                "value": {{ item.value }}
+                            }{{ "," if not loop.last else "" }}
+                        {% endfor -%}
+                    ]
+                }
+            }
+        ]
+    }
+}
